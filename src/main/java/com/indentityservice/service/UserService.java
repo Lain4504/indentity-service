@@ -3,6 +3,8 @@ package com.indentityservice.service;
 import com.indentityservice.dto.request.UserCreationRequest;
 import com.indentityservice.dto.request.UserUpdateRequest;
 import com.indentityservice.entity.User;
+import com.indentityservice.exception.AppException;
+import com.indentityservice.exception.ErrorCode;
 import com.indentityservice.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -17,8 +19,8 @@ public class UserService {
         User user = new User();
 
         if (userRepository.existsByUsername(request.getUsername()))
-            throw new RuntimeException("User existed.");
-
+            throw new AppException(ErrorCode.USER_EXISTED);
+//test
         user.setUsername(request.getUsername());
         user.setPassword(request.getPassword());
         user.setFirstname(request.getLastname());

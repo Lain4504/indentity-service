@@ -1,16 +1,18 @@
 package com.indentityservice.dto.request;
 
+import com.indentityservice.exception.ErrorCode;
+import jakarta.validation.constraints.Size;
+
 import java.time.LocalDate;
 
 public class UserCreationRequest {
+    @Size(min = 3, message = "USERNAME_INVALID")
     private String username;
+    @Size(min = 8, message = "PASSWORD_INVALID")
     private String password;
     private String firstname;
     private String lastname;
     private LocalDate doB;
-
-
-
     public String getUsername() {
         return username;
     }
