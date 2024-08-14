@@ -2,54 +2,24 @@ package com.indentityservice.dto.request;
 
 import com.indentityservice.exception.ErrorCode;
 import jakarta.validation.constraints.Size;
+import lombok.*;
+import lombok.experimental.FieldDefaults;
 
 import java.time.LocalDate;
-
+//@Getter
+//@Setter
+//tu dong tao method getter, setter
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
+@Builder
+@FieldDefaults(level = AccessLevel.PRIVATE)
 public class UserCreationRequest {
     @Size(min = 3, message = "USERNAME_INVALID")
-    private String username;
+     String username;
     @Size(min = 8, message = "PASSWORD_INVALID")
-    private String password;
-    private String firstname;
-    private String lastname;
-    private LocalDate doB;
-    public String getUsername() {
-        return username;
-    }
-
-    public void setUsername(String username) {
-        this.username = username;
-    }
-
-    public String getPassword() {
-        return password;
-    }
-
-    public void setPassword(String password) {
-        this.password = password;
-    }
-
-    public String getFirstname() {
-        return firstname;
-    }
-
-    public void setFirstname(String firstname) {
-        this.firstname = firstname;
-    }
-
-    public String getLastname() {
-        return lastname;
-    }
-
-    public void setLastname(String lastname) {
-        this.lastname = lastname;
-    }
-
-    public LocalDate getDoB() {
-        return doB;
-    }
-
-    public void setDoB(LocalDate doB) {
-        this.doB = doB;
-    }
+     String password;
+     String firstname;
+     String lastname;
+     LocalDate doB;
 }
