@@ -1,6 +1,5 @@
-package com.indentityservice.dto.response;
+package com.identityservice.dto.response;
 
-import jakarta.validation.constraints.Size;
 import lombok.*;
 import lombok.experimental.FieldDefaults;
 
@@ -12,9 +11,10 @@ import java.time.LocalDate;
 @Builder
 @FieldDefaults(level = AccessLevel.PRIVATE)
 public class UserResponse {
+    String id;
     String username;
     String password;
-    String firstname;
-    String lastname;
-    LocalDate doB;
+    String firstName;
+    String lastName;
+    LocalDate dob;
 }

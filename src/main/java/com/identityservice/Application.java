@@ -1,4 +1,4 @@
-package com.indentityservice;
+package com.identityservice;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

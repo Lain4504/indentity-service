@@ -1,4 +1,4 @@
-package com.indentityservice.dto.request;
+package com.identityservice.dto.request;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
 import lombok.*;
@@ -11,8 +11,8 @@ import lombok.experimental.FieldDefaults;
 @FieldDefaults(level = AccessLevel.PRIVATE)
 @JsonInclude(JsonInclude.Include.NON_NULL)
 public class ApiResponse <T> {
+    @Builder.Default
     private int code = 1000;
     private String message;
-    private T result; // tai vi co the tra ve nhieu kieu
-
+    private T result;
 }

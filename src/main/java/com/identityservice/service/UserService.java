@@ -1,13 +1,13 @@
-package com.indentityservice.service;
+package com.identityservice.service;
 
-import com.indentityservice.dto.request.UserCreationRequest;
-import com.indentityservice.dto.request.UserUpdateRequest;
-import com.indentityservice.dto.response.UserResponse;
-import com.indentityservice.entity.User;
-import com.indentityservice.exception.AppException;
-import com.indentityservice.exception.ErrorCode;
-import com.indentityservice.mapper.UserMapper;
-import com.indentityservice.repository.UserRepository;
+import com.identityservice.dto.request.UserCreationRequest;
+import com.identityservice.dto.request.UserUpdateRequest;
+import com.identityservice.dto.response.UserResponse;
+import com.identityservice.entity.User;
+import com.identityservice.exception.AppException;
+import com.identityservice.exception.ErrorCode;
+import com.identityservice.mapper.UserMapper;
+import com.identityservice.repository.UserRepository;
 import lombok.AccessLevel;
 import lombok.RequiredArgsConstructor;
 import lombok.experimental.FieldDefaults;
@@ -28,9 +28,10 @@ public class UserService {
         if (userRepository.existsByUsername(request.getUsername()))
             throw new AppException(ErrorCode.USER_EXISTED);
 
-        User user = userMapper.toUSer(request);
+        User user = userMapper.toUser(request);
         PasswordEncoder passwordEncoder = new BCryptPasswordEncoder(10);
         user.setPassword(passwordEncoder.encode(request.getPassword()));
+
         return userMapper.toUserResponse(userRepository.save(user));
     }
 
