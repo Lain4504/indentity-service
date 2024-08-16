@@ -3,6 +3,7 @@ package com.identityservice.service;
 import com.identityservice.dto.request.AuthenticationRequest;
 import com.identityservice.dto.request.IntrospectRequest;
 import com.identityservice.dto.request.LogoutRequest;
+import com.identityservice.dto.request.RefreshRequest;
 import com.identityservice.dto.response.AuthenticationResponse;
 import com.identityservice.dto.response.IntrospectResponse;
 import com.identityservice.entity.InvalidatedToken;
@@ -94,7 +95,33 @@ public class AuthenticationService {
 
         invalidatedTokenRepository.save(invalidatedToken);
     }
+    public AuthenticationResponse refreshToken(RefreshRequest request)
+            throws ParseException, JOSEException {
+        var signedJWT = verifyToken(request.getToken());
 
+        var jit = signedJWT.getJWTClaimsSet().getJWTID();
+        var expiryTime = signedJWT.getJWTClaimsSet().getExpirationTime();
+
+        InvalidatedToken invalidatedToken = InvalidatedToken.builder()
+                .id(jit)
+                .expiryTime(expiryTime)
+                .build();
+
+        invalidatedTokenRepository.save(invalidatedToken);
+
+        var username = signedJWT.getJWTClaimsSet().getSubject();
+
+        var user = userRepository.findByUsername(username).orElseThrow(
+                () -> new AppException(ErrorCode.UNAUTHENTICATED)
+        );
+
+        var token = generateToken(user);
+
+        return AuthenticationResponse.builder()
+                .token(token)
+                .authenticated(true)
+                .build();
+    }
     private String generateToken(User user) {
         JWSHeader header = new JWSHeader(JWSAlgorithm.HS512);
 
