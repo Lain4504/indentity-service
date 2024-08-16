@@ -1,4 +1,4 @@
-package com.devteria.identityservice.service;
+package com.identityservice.service;
 
 import java.util.HashSet;
 import java.util.List;
@@ -9,17 +9,17 @@ import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
-import com.devteria.identityservice.constant.PredefinedRole;
-import com.devteria.identityservice.dto.request.UserCreationRequest;
-import com.devteria.identityservice.dto.request.UserUpdateRequest;
-import com.devteria.identityservice.dto.response.UserResponse;
-import com.devteria.identityservice.entity.Role;
-import com.devteria.identityservice.entity.User;
-import com.devteria.identityservice.exception.AppException;
-import com.devteria.identityservice.exception.ErrorCode;
-import com.devteria.identityservice.mapper.UserMapper;
-import com.devteria.identityservice.repository.RoleRepository;
-import com.devteria.identityservice.repository.UserRepository;
+import com.identityservice.constant.PredefinedRole;
+import com.identityservice.dto.request.UserCreationRequest;
+import com.identityservice.dto.request.UserUpdateRequest;
+import com.identityservice.dto.response.UserResponse;
+import com.identityservice.entity.Role;
+import com.identityservice.entity.User;
+import com.identityservice.exception.AppException;
+import com.identityservice.exception.ErrorCode;
+import com.identityservice.mapper.UserMapper;
+import com.identityservice.repository.RoleRepository;
+import com.identityservice.repository.UserRepository;
 
 import lombok.AccessLevel;
 import lombok.RequiredArgsConstructor;

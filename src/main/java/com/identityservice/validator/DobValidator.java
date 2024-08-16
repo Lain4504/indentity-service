@@ -1,4 +1,4 @@
-package com.devteria.identityservice.validator;
+package com.identityservice.validator;
 
 import java.time.LocalDate;
 import java.time.temporal.ChronoUnit;

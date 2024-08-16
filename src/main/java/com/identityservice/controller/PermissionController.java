@@ -1,13 +1,13 @@
-package com.devteria.identityservice.controller;
+package com.identityservice.controller;
 
 import java.util.List;
 
 import org.springframework.web.bind.annotation.*;
 
-import com.devteria.identityservice.dto.request.ApiResponse;
-import com.devteria.identityservice.dto.request.PermissionRequest;
-import com.devteria.identityservice.dto.response.PermissionResponse;
-import com.devteria.identityservice.service.PermissionService;
+import com.identityservice.dto.request.ApiResponse;
+import com.identityservice.dto.request.PermissionRequest;
+import com.identityservice.dto.response.PermissionResponse;
+import com.identityservice.service.PermissionService;
 
 import lombok.AccessLevel;
 import lombok.RequiredArgsConstructor;

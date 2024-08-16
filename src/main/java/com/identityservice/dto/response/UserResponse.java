@@ -1,4 +1,4 @@
-package com.devteria.identityservice.dto.response;
+package com.identityservice.dto.response;
 
 import java.time.LocalDate;
 import java.util.Set;

@@ -1,4 +1,4 @@
-package com.devteria.identityservice.configuration;
+package com.identityservice.configuration;
 
 import java.util.HashSet;
 
@@ -8,11 +8,11 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.crypto.password.PasswordEncoder;
 
-import com.devteria.identityservice.constant.PredefinedRole;
-import com.devteria.identityservice.entity.Role;
-import com.devteria.identityservice.entity.User;
-import com.devteria.identityservice.repository.RoleRepository;
-import com.devteria.identityservice.repository.UserRepository;
+import com.identityservice.constant.PredefinedRole;
+import com.identityservice.entity.Role;
+import com.identityservice.entity.User;
+import com.identityservice.repository.RoleRepository;
+import com.identityservice.repository.UserRepository;
 
 import lombok.AccessLevel;
 import lombok.RequiredArgsConstructor;

@@ -1,4 +1,4 @@
-package com.devteria.identityservice.configuration;
+package com.identityservice.configuration;
 
 import java.io.IOException;
 
@@ -10,8 +10,8 @@ import org.springframework.http.MediaType;
 import org.springframework.security.core.AuthenticationException;
 import org.springframework.security.web.AuthenticationEntryPoint;
 
-import com.devteria.identityservice.dto.request.ApiResponse;
-import com.devteria.identityservice.exception.ErrorCode;
+import com.identityservice.dto.request.ApiResponse;
+import com.identityservice.exception.ErrorCode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
 public class JwtAuthenticationEntryPoint implements AuthenticationEntryPoint {

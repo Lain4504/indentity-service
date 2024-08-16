@@ -1,4 +1,4 @@
-package com.devteria.identityservice.entity;
+package com.identityservice.entity;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;

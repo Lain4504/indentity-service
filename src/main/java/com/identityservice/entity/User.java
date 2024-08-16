@@ -1,4 +1,4 @@
-package com.devteria.identityservice.entity;
+package com.identityservice.entity;
 
 import java.time.LocalDate;
 import java.util.Set;

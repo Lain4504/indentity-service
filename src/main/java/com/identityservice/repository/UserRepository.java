@@ -1,11 +1,11 @@
-package com.devteria.identityservice.repository;
+package com.identityservice.repository;
 
 import java.util.Optional;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
-import com.devteria.identityservice.entity.User;
+import com.identityservice.entity.User;
 
 @Repository
 public interface UserRepository extends JpaRepository<User, String> {

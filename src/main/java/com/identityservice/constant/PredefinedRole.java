@@ -1,4 +1,4 @@
-package com.devteria.identityservice.constant;
+package com.identityservice.constant;
 
 public class PredefinedRole {
     public static final String USER_ROLE = "USER";

@@ -1,4 +1,4 @@
-package com.devteria.identityservice.exception;
+package com.identityservice.exception;
 
 public class AppException extends RuntimeException {
 

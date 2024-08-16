@@ -1,11 +1,11 @@
-package com.devteria.identityservice.mapper;
+package com.identityservice.mapper;
 
 import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;
 
-import com.devteria.identityservice.dto.request.RoleRequest;
-import com.devteria.identityservice.dto.response.RoleResponse;
-import com.devteria.identityservice.entity.Role;
+import com.identityservice.dto.request.RoleRequest;
+import com.identityservice.dto.response.RoleResponse;
+import com.identityservice.entity.Role;
 
 @Mapper(componentModel = "spring")
 public interface RoleMapper {
