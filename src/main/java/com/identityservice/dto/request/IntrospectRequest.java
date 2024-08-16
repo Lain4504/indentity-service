@@ -1,4 +1,4 @@
-package com.identityservice.dto.request;
+package com.devteria.identityservice.dto.request;
 
 import lombok.*;
 import lombok.experimental.FieldDefaults;

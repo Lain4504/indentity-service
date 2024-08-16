@@ -1,6 +1,6 @@
-package com.identityservice.exception;
+package com.devteria.identityservice.exception;
 
-public class AppException extends RuntimeException{
+public class AppException extends RuntimeException {
 
     public AppException(ErrorCode errorCode) {
         super(errorCode.getMessage());
